@@ -1,0 +1,155 @@
+/* ===========================================================
+   Academe — Tema global do Slidev
+   Paleta e fontes alinhadas ao app Academe
+   =========================================================== */
+
+:root {
+  /* Marca */
+  --academe-primary: #892cdd;
+  --academe-primary-dark: #6b1fb8;
+  --academe-primary-light: #a855f7;
+
+  /* Fundos */
+  --academe-bg: #121212;
+  --academe-bg-dark: #0f0f0f;
+  --academe-card: #1a1a1a;
+
+  /* Texto */
+  --academe-text: #ffffff;
+  --academe-text-secondary: #b0b0b0;
+  --academe-text-tertiary: #71717a;
+
+  /* Slidev usa estas variáveis internamente */
+  --slidev-theme-primary: var(--academe-primary);
+}
+
+/* ---- Base clara ---- */
+.slidev-layout {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---- Títulos ---- */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.slidev-layout h1 {
+  font-size: 2.6em;
+  line-height: 1.1;
+}
+
+/* Parágrafo de apoio logo após o h1 principal */
+.slidev-layout h1 + p {
+  color: #555555;
+}
+
+/* ---- Links ---- */
+.slidev-layout a {
+  color: var(--academe-primary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(137, 44, 221, 0.35);
+  transition: border-color 0.2s ease;
+}
+.slidev-layout a:hover {
+  border-bottom-color: var(--academe-primary);
+}
+
+/* ---- Destaque roxo em <strong> ---- */
+.slidev-layout strong {
+  color: var(--academe-primary);
+}
+
+/* ---- Código inline ---- */
+.slidev-layout :not(pre) > code {
+  color: var(--academe-primary-dark);
+  background: rgba(137, 44, 221, 0.1);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+}
+.slidev-layout pre {
+  border: 1px solid rgba(137, 44, 221, 0.2);
+  border-radius: 10px;
+}
+
+/* ---- Tabelas ---- */
+.slidev-layout th {
+  color: var(--academe-primary);
+  border-bottom-color: rgba(137, 44, 221, 0.4) !important;
+}
+.slidev-layout td {
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ---- Blockquote ---- */
+.slidev-layout blockquote {
+  border-left: 3px solid var(--academe-primary);
+  color: #555555;
+}
+
+/* ===========================================================
+   Classes utilitárias da marca (use com class="..." no slide)
+   =========================================================== */
+
+/* Gradiente roxo no texto (títulos de capa) */
+.academe-gradient {
+  background: linear-gradient(120deg, #a855f7 0%, #892cdd 55%, #6b1fb8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fundo claro com leve brilho roxo (capa clara) */
+.slidev-layout.academe-light {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(55% 55% at 18% 12%, rgba(137, 44, 221, 0.10) 0%, transparent 60%),
+    radial-gradient(45% 45% at 88% 92%, rgba(168, 85, 247, 0.10) 0%, transparent 55%);
+  color: #1a1a1a;
+}
+.slidev-layout.academe-light h1 {
+  color: #1a1a1a;
+}
+
+/* Fundo com brilho roxo (capa/seções) */
+.academe-glow {
+  background-color: var(--academe-bg-dark);
+  background-image:
+    radial-gradient(60% 60% at 20% 15%, rgba(137, 44, 221, 0.28) 0%, transparent 60%),
+    radial-gradient(50% 50% at 85% 90%, rgba(168, 85, 247, 0.18) 0%, transparent 55%);
+}
+
+/* Chip de ícone (SVG carbon em roxo) */
+.icon-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  font-size: 1.9rem;
+  color: var(--academe-primary);
+  background: rgba(137, 44, 221, 0.1);
+  border: 1px solid rgba(137, 44, 221, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.icon-chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(137, 44, 221, 0.25);
+}
+
+/* Rodapé fixo com logo */
+.academe-footer {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.6rem;
+  opacity: 0.7;
+  height: 1.1rem;
+}
